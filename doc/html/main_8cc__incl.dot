@@ -1,0 +1,45 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/main.cc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="machine/multiboot.h",height=0.2,width=0.4,color="black",URL="$multiboot_8h.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="stdint.h",height=0.2,width=0.4,color="grey75"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="machine/cpu.h",height=0.2,width=0.4,color="black",URL="$machine_2cpu_8h.html"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="device/interruptmanager.h",height=0.2,width=0.4,color="black",URL="$interruptmanager_8h.html"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="common/interruptstorage.h",height=0.2,width=0.4,color="black",URL="$interruptstorage_8h.html"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="common/interrupthandler.h",height=0.2,width=0.4,color="black",URL="$interrupthandler_8h.html"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="machine/pic.h",height=0.2,width=0.4,color="black",URL="$pic_8h.html"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="machine/io_port.h",height=0.2,width=0.4,color="black",URL="$io__port_8h.html"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="device/keyboard.h",height=0.2,width=0.4,color="black",URL="$device_2keyboard_8h.html"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="machine/keyctrl.h",height=0.2,width=0.4,color="black",URL="$keyctrl_8h.html"];
+  Node11 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="machine/key.h",height=0.2,width=0.4,color="black",URL="$key_8h.html"];
+  Node10 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="device/cgastr.h",height=0.2,width=0.4,color="black",URL="$cgastr_8h.html"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="common/o_stream.h",height=0.2,width=0.4,color="black",URL="$o__stream_8h.html"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="common/strbuf.h",height=0.2,width=0.4,color="black",URL="$strbuf_8h.html"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="config.h",height=0.2,width=0.4,color="black",URL="$config_8h.html",tooltip="defines for different configurations of OOStuBS"];
+  Node13 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="machine/cgascr.h",height=0.2,width=0.4,color="black",URL="$cgascr_8h.html"];
+  Node1 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="user/task2.h",height=0.2,width=0.4,color="black",URL="$task2_8h.html"];
+  Node18 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="user/appl.h",height=0.2,width=0.4,color="black",URL="$appl_8h.html",tooltip="declaration of basic class for application of the tasks"];
+}

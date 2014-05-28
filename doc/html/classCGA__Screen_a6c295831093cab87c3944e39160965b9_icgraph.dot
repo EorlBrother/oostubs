@@ -1,0 +1,25 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CGA_Screen::print",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CGA_Stream::flush",height=0.2,width=0.4,color="black",URL="$classCGA__Stream.html#a73572f5377a28f09ee9dc3af7b5a65b9",tooltip="flush the content of the internal buffer"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="printException",height=0.2,width=0.4,color="black",URL="$exceptions_8cc.html#aa9be12416ab5fcc6ced0ea49ff7825de"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="exception",height=0.2,width=0.4,color="black",URL="$exceptions_8cc.html#a17ac45e3213989a19bb1472093ca30e6",tooltip="Entry point for exceptions."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Task1::testKout",height=0.2,width=0.4,color="black",URL="$classTask1.html#a48ca608ac9cdc03ab6614a4f61e2448e",tooltip="test the functionality of the Kout object"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Task1::action",height=0.2,width=0.4,color="black",URL="$classTask1.html#a0d4029a13591e70af436c0ead066ea5c",tooltip="parse and print multiboot information"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Task1::testKeyboard",height=0.2,width=0.4,color="black",URL="$classTask1.html#a587ce3fad20f9ec4ec88beefd08db49e",tooltip="test the functionality of the Keyboard_Controller object"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Task2::action",height=0.2,width=0.4,color="black",URL="$classTask2.html#aa5de17846032b02d6d0819cdc78b1b3e",tooltip="prints the line"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="kernel",height=0.2,width=0.4,color="black",URL="$main_8cc.html#a796315624c9bcf31fd673cb62e4b9819",tooltip="kernel entry point"];
+}

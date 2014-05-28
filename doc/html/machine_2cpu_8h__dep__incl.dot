@@ -1,0 +1,19 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/machine/cpu.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="include/object/cpu.h",height=0.2,width=0.4,color="black",URL="$object_2cpu_8h.html",tooltip="help include file for use of global declared variable cpu, declared in main.cc"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="include/locking/intlock.h",height=0.2,width=0.4,color="black",URL="$intlock_8h.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="src/machine/keyctrl.cc",height=0.2,width=0.4,color="black",URL="$keyctrl_8cc.html"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="src/machine/exceptions.cc",height=0.2,width=0.4,color="black",URL="$exceptions_8cc.html",tooltip="interrupt handler function"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="src/machine/pic.cc",height=0.2,width=0.4,color="black",URL="$pic_8cc.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="src/main.cc",height=0.2,width=0.4,color="black",URL="$main_8cc.html"];
+}

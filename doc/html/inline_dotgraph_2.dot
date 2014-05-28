@@ -1,0 +1,57 @@
+ 
+  digraph task1 {
+    size="5.9,5.5";
+    node [shape=box, style="solid,filled", fillcolor=white];
+    
+    
+    kernelF [label="kernel(...)", shape=oval, URL="\ref kernel"];
+    
+    subgraph cluster_subuser {
+      rank="source";
+      style=filled;
+      color=lightgray;
+      label = "user";
+      labeljust=l;
+      task2C [label="Task2", URL="\ref Task2"];
+    }
+    
+    subgraph cluster_submachine {
+      style=filled;
+      color=lightgray;
+      label = "machine";
+      labeljust=r;
+      keyctrlC   [label="Keyboard_Controller", URL="\ref Keyboard_Controller"];
+      picC       [label="PIC", URL="\ref PIC", color=blue];
+      exceptionF [label="exception(...)", shape=oval, URL="\ref exception", color=blue];
+      cpuC  [label="CPU", URL="\ref CPU"];
+    }
+
+    subgraph cluster_subcommon {
+      style=filled;
+      color=lightgray;
+      label = "common";
+      labeljust=c;
+      handlerC [label="InterruptHandler", URL="\ref InterruptHandler"];
+      panicC   [label="Panic", URL="\ref Panic", color=blue];
+      storageC [label="InterruptStorage", URL="\ref InterruptStorage", color=blue];
+    }
+    
+    subgraph cluster_subdevice {
+      style=filled;
+      color=lightgray;
+      label = "device";
+      labeljust=c;
+      managerC [label="InterruptManager", URL="\ref InterruptManager", color=blue];
+      keyboardC [label="Keyboard", URL="\ref Keyboard", color=blue];
+      koutC [label="CGA_Stream", URL="\ref CGA_Stream"];
+    }
+    
+    
+    kernelF -> task2C [arrowhead="open"]; task2C -> koutC [arrowhead="open"];
+    task2C -> managerC [arrowhead="open"]; picC -> cpuC [arrowhead="open"];
+    panicC -> cpuC [arrowhead="open"]; panicC -> handlerC [arrowhead="empty"];
+    keyboardC -> keyctrlC [arrowhead="empty"]; keyboardC -> handlerC
+    [arrowhead="empty"]; keyboardC -> managerC [arrowhead="open", weight=4];
+    storageC -> panicC [arrowhead="open", weight=2]; managerC -> storageC
+    [arrowhead="empty", weight=2]; managerC -> picC  [arrowhead="empty",
+    weight=2]; exceptionF -> managerC [arrowhead="open", weight=5]; } 
